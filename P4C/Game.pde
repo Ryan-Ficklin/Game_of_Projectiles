@@ -2,7 +2,7 @@ import java.util.*;
 
 class Game {
   
-  ArrayList<Sprite> sprites = new ArrayList<>();
+  ArrayList<Sprite> sprites = new ArrayList<Sprite>();
   Player player;
   
   void config() {
@@ -20,9 +20,9 @@ class Game {
   
   void play() {
     background(0);
-    for(Sprite s : sprites) {
-      s.move();
-      s.render();
+    for(int i = sprites.size(); i > 0; i--) {
+      sprites.get(i-1).move();
+      sprites.get(i-1).render();
     }
   }
   
@@ -38,4 +38,10 @@ class Game {
    //print("spawned");
    sprites.add(sprite);
   }
+  
+  void despawn(AbstractSprite sprite){
+    //print("despawned");
+    sprites.remove(sprite);
+  }
+  
 }

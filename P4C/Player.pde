@@ -27,6 +27,7 @@ class Player extends AbstractSprite{
     if (key == 's') {down = false; ySpeed = 0;}
     if (key == 'a') {left = false; xSpeed = 0;}
     if (key == 'd') {right = false; xSpeed = 0;}
+    //if (key == ' ') {fire();}
   }
 
   void keyDown(char key){
@@ -34,6 +35,10 @@ class Player extends AbstractSprite{
     if (key == 's') {down = true;}
     if (key == 'a') {left = true;}
     if (key == 'd') {right = true;}
-    
+    if (key == ' ') {fire();}
+  }
+  
+  void fire(){
+   game.spawn(new Bullet(this.x, this.y)); 
   }
 }

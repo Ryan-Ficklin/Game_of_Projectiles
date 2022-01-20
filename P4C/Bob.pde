@@ -12,4 +12,7 @@ class Bob extends AbstractSprite{
     if(x < 0 + w/2 || x > width - w/2) xSpeed *= -1;
     if(y < 0 + h/2 || y > height - h/2) ySpeed *= -1;
   }
+  void collide(){
+    
+  }
 }

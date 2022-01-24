@@ -16,4 +16,5 @@ class Bullet extends AbstractSprite{
   void move(){
     y += ySpeed;
   }
+  
 }

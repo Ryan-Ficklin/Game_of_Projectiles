@@ -20,6 +20,7 @@ class Game {
   
   void play() {
     background(0);
+    
     for(int i = sprites.size(); i > 0; i--) {
       sprites.get(i-1).move();
       sprites.get(i-1).render();

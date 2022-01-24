@@ -20,8 +20,9 @@ abstract class AbstractSprite implements Sprite{
    this.col = col;
   }
   abstract void move();
-  boolean collide(int x1, int y1, int x2, int y2){
-     
+  
+  boolean collide(int x1, int y1, int x2, int y2, int r1, int r2){
+     return (Math.sqrt(Math.pow((x2 - x1),2)) + Math.sqrt(Math.pow((y2 - y1),2))) < r1+r2;
   }
   
   void render(){

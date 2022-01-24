@@ -14,10 +14,6 @@ class Player extends AbstractSprite{
     if     (right && left) { xSpeed = 0;}
     else if(right)         { xSpeed = 3;} 
     else if(left)          { xSpeed = -3;}
-    //if     (up && left)    { ySpeed = -2; xSpeed = -2;}
-    //if     (up && right)   { ySpeed = -2; xSpeed = 2;}
-    //if     (down && left)  { ySpeed = 2; xSpeed = -2;}
-    //if     (down && right) { ySpeed = 2; xSpeed = 2;}
     x += xSpeed;
     y += ySpeed;
   }
